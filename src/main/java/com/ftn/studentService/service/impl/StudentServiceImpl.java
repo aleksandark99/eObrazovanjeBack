@@ -1,5 +1,7 @@
 package com.ftn.studentService.service.impl;
 
+import com.ftn.studentService.model.Student;
+import com.ftn.studentService.repository.StudentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,6 +14,9 @@ public class StudentServiceImpl implements StudentService{
 
 	@Autowired
 	private UserRepository repository;
+
+	@Autowired
+	private StudentRepository studentRepository;
 	
 	@Override
 	public User findById(int userId) {
@@ -23,6 +28,11 @@ public class StudentServiceImpl implements StudentService{
 	public void deleteById(int userId) {
 		// TODO Auto-generated method stub
 		
+	}
+
+	@Override
+	public Student save(Student student) {
+		return studentRepository.save(student);
 	}
 
 }

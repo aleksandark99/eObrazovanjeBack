@@ -1,11 +1,15 @@
 package com.ftn.studentService.model;
 
 import com.ftn.studentService.model.enums.UserType;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.*;
 import java.util.Set;
 
 @Entity
+@Setter
+@NoArgsConstructor
 public class User {
 
 
